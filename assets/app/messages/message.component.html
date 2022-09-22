@@ -1,14 +1,21 @@
-<article class="panel panel-default">
+<article class="panel panel-default" [ngStyle]="{backgroundColor: color, 'font-size.px': tam}"
+                                    (click)="color='yellow'"
+                                    (dblclick)="onMudaStyle()"
+                                    (mouseenter)="color = 'green'"
+                                    (mouseleave)="color = 'blue'">
     <div class="panel-body">
-        {{ message.content }}
+        {{ messageVarClasse.content }}
+        {{ messageVarClasseAlias.content }}
     </div>
     <footer class="panel-footer">
         <div class="author">
-            {{ message.author }}
+            {{ messageVarClasse.username }}
+            {{ messageVarClasseAlias.username }}
         </div>
         <div class="config">
-            <a href="#">Edit</a>
+            <a href="#" (click)="onEdit()">Edit</a>
             <a href="#">Delete</a>
         </div>
+
     </footer>
 </article>

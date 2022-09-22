@@ -1,7 +1,48 @@
 <div class="container">
     <div class="row">
+        <strong class="col-md-8 col-md-offset-2">== Após Reestruturação ==</strong>
+        <app-message-input></app-message-input>
+        <app-message-list></app-message-list>
+        <strong class="col-md-8 col-md-offset-2">====================</strong>
         <div class="col-md-8 col-md-offset-2">
-           <app-message></app-message>
+           <strong>== Com messageBinding ==</strong>
+            <app-message [messageVarClasse]="msg"
+                        (editClicked_MessageMetodoClasse)="msg.content = $event"
+                        *ngFor="let msg of messageS">
+            </app-message>
         </div>
     </div>
 </div>
+<button (click)="onMudaMostrarElemento()">Click aqui Novo Estudo</button>
+{{mostrarElemento}}
+<div *ngIf="mostrarElemento">
+    <p>Cadê a div que estava aqui com um monte de elementos</p>
+    <select id="cboCidades">
+        <option value=""></option>
+        <option value="vix">Vitória</option>
+        <option value="vv">Vila Velha</option>
+    </select>
+    <button>Click aqui</button>
+</div>
+<p></p>
+<button (click)="valorNgSwitch=1">selecione - 1</button>
+<button (click)="valorNgSwitch=2">selecione - 2</button>
+<button (click)="valorNgSwitch=3">selecione - 3</button>
+<h5>Você selecionou: {{valorNgSwitch}}</h5>
+
+<div [ngSwitch]="valorNgSwitch">
+    <div *ngSwitchCase="1">1. Template - <b>{{valorNgSwitch}}</b> </div>
+    <div *ngSwitchCase="2">2. Template - <b>{{valorNgSwitch}}</b> </div>
+    <div *ngSwitchCase="3">3. Template - <b>{{valorNgSwitch}}</b> </div>
+    <div *ngSwitchDefault>Default Template</div>
+</div>
+
+<p></p>
+<input type="text" [(ngModel)]="nomeNgSwitch">
+{{nomeNgSwitch}}
+<ul [ngSwitch]="nomeNgSwitch">
+    <li *ngSwitchCase="'LuisHenrique'">Bom dia LuisHenrique</li>
+    <li *ngSwitchCase="'LuisFernando'">Bom dia Luis Fernando</li>
+    <li *ngSwitchCase="'CarlosEduardo'">Bom dia Carlos Eduardo</li>
+    <li *ngSwitchDefault>Digite algo acima</li>
+</ul>
