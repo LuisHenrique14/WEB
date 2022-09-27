@@ -9,6 +9,7 @@ import { MessageInputComponent } from './messages/message-input.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AuthenticationComponent } from './auth/authentication.component';
 import { HeaderComponent } from './header.component';
+import { FormularioDrivenAtivComponent } from './messages/formularioDrivenAtiv.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from './header.component';
         MessageInputComponent,
         MessagesComponent,
         AuthenticationComponent,
-        HeaderComponent
+        HeaderComponent,
+        FormularioDrivenAtivComponent,
     ],
     imports: [BrowserModule, FormsModule],
     bootstrap: [AppComponent]
