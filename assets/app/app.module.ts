@@ -10,6 +10,11 @@ import { MessagesComponent } from './messages/messages.component';
 import { AuthenticationComponent } from './auth/authentication.component';
 import { HeaderComponent } from './header.component';
 import { FormularioDrivenAtivComponent } from './messages/formularioDrivenAtiv.component';
+import { myrouting } from './app.routing';
+import { SignupComponent } from './auth/signup.component';
+import { LogoutComponent } from './auth/logout.component';
+import { SigninComponent } from './auth/signin.component';
+import { DadosComponent01 } from './dados01.component';
 
 @NgModule({
     declarations: [
@@ -20,9 +25,13 @@ import { FormularioDrivenAtivComponent } from './messages/formularioDrivenAtiv.c
         MessagesComponent,
         AuthenticationComponent,
         HeaderComponent,
-        FormularioDrivenAtivComponent,
+        FormularioDrivenAtivComponent
+        LogoutComponent,
+        SigninComponent,
+        SignupComponent,
+        DadosComponent01,
     ],
-    imports: [BrowserModule, FormsModule],
+    imports: [BrowserModule, FormsModule, myrouting],
     bootstrap: [AppComponent]
 })
 export class AppModule {
