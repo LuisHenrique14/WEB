@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'; 
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from "./app.component";
 import { MessageComponent } from './messages/message.component';
@@ -14,7 +14,6 @@ import { myrouting } from './app.routing';
 import { SignupComponent } from './auth/signup.component';
 import { LogoutComponent } from './auth/logout.component';
 import { SigninComponent } from './auth/signin.component';
-import { DadosComponent01 } from './dados01.component';
 
 @NgModule({
     declarations: [
@@ -29,9 +28,9 @@ import { DadosComponent01 } from './dados01.component';
         LogoutComponent,
         SigninComponent,
         SignupComponent,
-        DadosComponent01,
+        FormularioDrivenAtivComponent,
     ],
-    imports: [BrowserModule, FormsModule, myrouting],
+    imports: [BrowserModule, FormsModule, myrouting, ReactiveFormsModule],
     bootstrap: [AppComponent]
 })
 export class AppModule {
