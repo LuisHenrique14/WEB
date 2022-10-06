@@ -14,6 +14,8 @@ import { myrouting } from './app.routing';
 import { SignupComponent } from './auth/signup.component';
 import { LogoutComponent } from './auth/logout.component';
 import { SigninComponent } from './auth/signin.component';
+import { HttpModule } from '@angular/http';
+
 
 @NgModule({
     declarations: [
@@ -30,7 +32,7 @@ import { SigninComponent } from './auth/signin.component';
         SignupComponent,
         FormularioDrivenAtivComponent,
     ],
-    imports: [BrowserModule, FormsModule, myrouting, ReactiveFormsModule],
+    imports: [BrowserModule, FormsModule, myrouting, ReactiveFormsModule, HttpModule],
     bootstrap: [AppComponent]
 })
 export class AppModule {
